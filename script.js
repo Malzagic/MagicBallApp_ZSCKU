@@ -46,14 +46,15 @@ async function getResponse(){
     // callback
     let getAnswear = checkInput(profanityArr);
     let getAnswear2 = checkInput(directionArr);
-
+    console.log(getAnswear);
+    console.log(getAnswear2);
     // what's checking function return
-    if(getAnswear2) {
+    if(getAnswear2 && getAnswear == undefined) {
       createP.classList.remove('error');
       createP.classList.add('answear');
       questionArea.appendChild(createP);
       createP.textContent = `Odpowiedź: ${randomAnswear(professionArr)}`;
-    } else if(getAnswear){
+    } else if(getAnswear == true && getAnswear2 == true){
       createP.classList.remove('answear');
       createP.classList.add('error');
       questionArea.appendChild(createP);
