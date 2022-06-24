@@ -17,15 +17,15 @@ const checkValue = () => {
   if(inputText.value === '') {
     createP.classList.add('error');
     questionArea.appendChild(createP);
-    createP.textContent = 'Zadaj pytanie!';
+    createP.textContent = 'Odpowiedź: Zadaj pytanie!';
   } else if(!(inputText.value.match(questionMark))){
     createP.classList.add('error');
     questionArea.appendChild(createP);
-    createP.textContent = 'Brak znaku zapytania!';
+    createP.textContent = 'Odpowiedź: Brak znaku zapytania!';
   } else if(inputText.value.match(signs)){
     createP.classList.add('error');
     questionArea.appendChild(createP);
-    createP.textContent = 'Błędna wartość!';
+    createP.textContent = 'Odpowiedź: Błędna wartość!';
   } else {
     getResponse()
   }
@@ -52,17 +52,17 @@ async function getResponse(){
       createP.classList.remove('error');
       createP.classList.add('answear');
       questionArea.appendChild(createP);
-      createP.textContent = `${randomAnswear(professionArr)}`;
+      createP.textContent = `Odpowiedź: ${randomAnswear(professionArr)}`;
     } else if(getAnswear){
       createP.classList.remove('answear');
       createP.classList.add('error');
       questionArea.appendChild(createP);
-      createP.textContent = `Nie wolno przeklinać!`;
+      createP.textContent = `Odpowiedź: Nie wolno przeklinać!`;
     } else {
       createP.classList.remove('error');
       createP.classList.add('answear');
       questionArea.appendChild(createP);
-      createP.textContent = `Nie wiem!`;
+      createP.textContent = `Odpowiedź: Nie wiem!`;
     }
   });
 }
