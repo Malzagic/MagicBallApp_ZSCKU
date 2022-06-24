@@ -12,6 +12,7 @@ const signs = /[0-9\!\@\#\$\%\^\&\*\)\(\+\=\.\<\>\{\}\[\]\:\;\'\"\|\~\`\_\-]/;
 // Changing variables
 let newAnswear;
 
+// Start checking basic input values
 const checkValue = () => {
   if(inputText.value === '') {
     createP.classList.add('error');
@@ -78,7 +79,7 @@ const checkInput = arr => {
   }
 }
 
-
+// Generate random answears from array
 const randomAnswear = newArr => {
   for(let x = 0; x < newArr.length; x++){
     newAnswear = Math.floor(Math.random() * newArr.length);
@@ -86,6 +87,7 @@ const randomAnswear = newArr => {
   return newArr[newAnswear];
 }
 
+// Listener to start app and shakeball
 ballImage.addEventListener('click', e => {
   ballImage.classList.add('shake-animation');
   setTimeout( () => {
