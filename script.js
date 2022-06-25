@@ -54,7 +54,7 @@ async function getResponse(){
       createP.classList.add('answear');
       questionArea.appendChild(createP);
       createP.textContent = `Odpowiedź: ${randomAnswear(professionArr)}`;
-    } else if(getAnswear == true && getAnswear2 == true){
+    } else if(getAnswear == true && getAnswear2 == true || getAnswear == true && getAnswear2 == undefined){
       createP.classList.remove('answear');
       createP.classList.add('error');
       questionArea.appendChild(createP);
