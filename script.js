@@ -54,17 +54,19 @@ async function getResponse(){
       createP.classList.add('answear');
       questionArea.appendChild(createP);
       createP.textContent = `Odpowiedź: ${randomAnswear(professionArr)}`;
+      inputText.value = '';
     } else if(getAnswear == true && getAnswear2 == true || getAnswear == true && getAnswear2 == undefined){
       createP.classList.remove('answear');
       createP.classList.add('error');
       questionArea.appendChild(createP);
       createP.textContent = `Odpowiedź: Nie wolno przeklinać!`;
-      inputText.value = ''
+      inputText.value = '';
     } else {
       createP.classList.remove('error');
       createP.classList.add('answear');
       questionArea.appendChild(createP);
       createP.textContent = `Odpowiedź: Nie wiem!`;
+      inputText.value = '';
     }
   });
 }
