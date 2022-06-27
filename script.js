@@ -59,6 +59,7 @@ async function getResponse(){
       createP.classList.add('error');
       questionArea.appendChild(createP);
       createP.textContent = `Odpowiedź: Nie wolno przeklinać!`;
+      inputText.value = ''
     } else {
       createP.classList.remove('error');
       createP.classList.add('answear');
